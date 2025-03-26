@@ -1,6 +1,10 @@
 #!/bin/bash
 
 USERID=$(id -u)
+VALIDATE(){
+     echo "Exit status: $1"
+     echo "what are you doing: $2"
+}
 
 if [ $USERID -ne 0 ]
 then
@@ -10,21 +14,9 @@ else
     echo "super user"
 fi    
 
-dnf install mysqll -y
-if [ $? -ne 0 ]
-then
-    echo " installtion of mysqll...failure"
-    exit 1
- else
-     echo " installtion of mysql..success"   
-fi
+dnf install mysql -y
+VALIDATE $? "installing mysql"
 
-dnf install gitt -y
-if [ $? -ne 0 ]
-then
-    echo " installtion of giot-t..failure"
-    exit 1
-else
-    echo " installtion of git..success"
-fi        
-echo "is this proceding?"
+
+dnf install git -y
+VALIDATE $? "installing git"
