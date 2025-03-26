@@ -10,7 +10,7 @@ else
     echo "super user"
 fi    
 
-dnf install mysql -y
+dnf install mysqll -y
 if [ $? -ne 0 ]
 then
     echo " installtion of mysqll...failure"
@@ -19,7 +19,7 @@ then
      echo " installtion of mysql..success"   
 fi
 
-dnf install git -y
+dnf install gitt -y
 if [ $? -ne 0 ]
 then
     echo " installtion of giot-t..failure"
