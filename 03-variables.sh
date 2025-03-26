@@ -1,7 +1,7 @@
 #!/bin/bash
 
-person1=$vas
-person2=$yash
+person1=vas
+person2=yash
 
 echo "$person1:: hello, $person2, how are you?"
 echo "$person2:: $person1, i am fine. how are you?"
