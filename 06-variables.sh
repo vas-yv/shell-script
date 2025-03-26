@@ -1,10 +1,10 @@
 #!/bin/bash
 
-echo "please enter username"
+echo -s "please enter username"
 
 read USERNAME
 
-echo "please enter password"
+echo -s "please enter password"
 
 read PASSWORD
 
