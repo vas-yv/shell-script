@@ -1,1 +1,2 @@
-Hi i am using AWS with Devops
+create repo in githud
+clone repo into your local machine.
