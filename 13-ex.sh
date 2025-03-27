@@ -10,6 +10,10 @@ else
     echo "super user"    
 fi
 
-dnf install git -y
+dnf install gitt -y
 
+if [ $? -ne 0 ]
+then
+    echo " installtion of git failure"
+fi    
 echo "is procedding further?"
