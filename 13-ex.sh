@@ -2,6 +2,11 @@
 
 userid=$(id -u)
 
+validate(){
+    echo "exit status : $1"
+    echo "what your doing: $2"
+}
+
 if [ $userid -ne 0 ]
 then
     echo "please get root access to run this"
@@ -11,20 +16,7 @@ else
 fi
 
 dnf install git -y
-
-if [ $? -ne 0 ]
-then
-    echo " installtion of git failure"
-    exit 1 # manuall exit if fail
- else
-    echo " installation pg git sucess"  
-fi
+validate $? "installion of mysql"
 
 dnf install mysql -y
-if [ $? -ne 0 ]
-then
-    echo " installation of mysql is fail"
-    exit 1
-else
-    echo " installation of mysql if success"
-fi    
+validate $? "installation of git"
