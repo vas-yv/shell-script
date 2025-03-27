@@ -10,7 +10,7 @@ else
     echo "super user"    
 fi
 
-dnf install gitt -y
+dnf install git -y
 
 if [ $? -ne 0 ]
 then
