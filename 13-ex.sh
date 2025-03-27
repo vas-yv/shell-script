@@ -17,5 +17,14 @@ then
     echo " installtion of git failure"
     exit 1 # manuall exit if fail
  else
-    echo " installation pg git sucess"   
+    echo " installation pg git sucess"  
+fi
+
+dnf install mysql -y
+if [ $? -ne 0 ]
+then
+    echo " installation of mysql is fail"
+    exit 1
+else
+    echo " installation of git if success"
 fi    
