@@ -16,5 +16,6 @@ if [ $? -ne 0 ]
 then
     echo " installtion of git failure"
     exit 1 # manuall exit if fail
+ else
+    echo " installation pg git sucess"   
 fi    
-echo "is procedding further?"
