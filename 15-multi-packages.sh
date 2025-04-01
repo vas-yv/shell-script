@@ -8,6 +8,16 @@ R="\e[31m"
 G="\e[32m"
 N="\e[0m"
 
+validate(){
+  if [ $1 -ne 0 ]
+  then 
+      echo "$2..fail"
+      exit 1
+  else
+      echo "$2..success"
+  fi        
+}
+
 if [ $userid -ne 0 ]
 then
     echo "user should run with root access"
@@ -24,6 +34,7 @@ do
   then
       echo -e "$i already installed...$R skipping $N"
   else
-      echo -e "$i not installed...$R need to install $N"
+      dnf install $i -y &>>$logfile
+      validate $? "installation of package"
   fi 
 done
