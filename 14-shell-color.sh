@@ -1,7 +1,8 @@
 #!/bin/bash
 
 userid=$(id -u)
-if [$userid -ne 0 ]
+
+if [ $userid -ne 0 ]
 then
     echo -e "\e[31m user should run with root access"
     exit 1
