@@ -12,6 +12,20 @@ fi
 
 
 dnf install mysqll -y
+if [ $? -ne 0 ]
+then
+    echo -e "\e[31m installation of mysql is failed"
+    exit 1
+else
+    echo -e "\e[32m installtion of mysql got success"
+fi        
 
 
 dnf install gitt -y
+if [ $? -ne 0 ]
+then
+    echo -e "\e[31m installation of git is failed"
+    exit 1
+else
+    echo -e "\e[32m installation of git got success"
+fi        
