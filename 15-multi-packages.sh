@@ -11,10 +11,10 @@ N="\e[0m"
 validate(){
   if [ $1 -ne 0 ]
   then 
-      echo "$2..fail"
+      echo -e "$2..$R fail $N"
       exit 1
   else
-      echo "$2..success"
+      echo -e "$2..$G success $N"
   fi        
 }
 
@@ -35,6 +35,6 @@ do
       echo -e "$i already installed...$R skipping $N"
   else
       dnf install $i -y &>>$logfile
-      validate $? "installation of package"
+      validate $? "installation of $i"
   fi 
 done
