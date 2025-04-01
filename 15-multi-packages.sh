@@ -24,6 +24,6 @@ do
   then
       echo -e "$i already installed...$R skipping $N"
   else
-      echo "$i not installed...$R need to install $N"
+      echo -e "$i not installed...$R need to install $N"
   fi 
 done
