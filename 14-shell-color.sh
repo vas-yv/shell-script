@@ -11,7 +11,7 @@ else
 fi        
 
 
-dnf install mysqll -y
+dnf install mysql -y
 if [ $? -ne 0 ]
 then
     echo -e "\e[31m installation of mysql is failed"
@@ -21,7 +21,7 @@ else
 fi        
 
 
-dnf install gitt -y
+dnf install git -y
 if [ $? -ne 0 ]
 then
     echo -e "\e[31m installation of git is failed"
