@@ -1,6 +1,9 @@
 #!/bin/bash
 
 userid=$(id -u)
+timestamp=$(date +%F-%H-%M-%S)
+script_name=$(echo $0 | cut -d "." -f1)
+logfile=/tmp/$script-name-$timestamp.sh
 
 if [ $userid -ne 0 ]
 then
@@ -11,7 +14,7 @@ else
 fi        
 
 
-dnf install mysql -y
+dnf install mysql -y &>>$logfile
 if [ $? -ne 0 ]
 then
     echo -e "\e[31m installation of mysql is failed"
@@ -21,7 +24,7 @@ else
 fi        
 
 
-dnf install git -y
+dnf install git -y &>>$logfile
 if [ $? -ne 0 ]
 then
     echo -e "\e[31m installation of git is failed"
